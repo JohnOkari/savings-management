@@ -1,22 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Customer msg="Welcome to Your Vue.js App"/>
+    <header>
+      <nav>
+        <router-link to="/customer-list">Customer List</router-link> <!-- Add the new customer list link -->
+      </nav>
+    </header>
+    <main>
+      <router-view></router-view>
+    </main>
+    <footer>
+      <!-- Footer content goes here -->
+    </footer>
   </div>
 </template>
 
 <script>
-import Customer from './components/Customer.vue';
-
 export default {
   name: 'App',
-  components: {
-    Customer
-  }
-}
+};
 </script>
 
 <style>
+/* Global CSS styles go here */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
